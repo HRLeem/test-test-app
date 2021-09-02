@@ -1,0 +1,47 @@
+body {
+    box-sizing: border-box;
+    color: #333;
+    overflow: visible !important;
+    width: 100%;
+}
+
+/* 공통부분 */
+a:link, a:visited { text-decoration: none; color: #666; }
+a:hover { text-decoration: none; color: black; }
+
+.-bold { font-family: bold; }
+
+/* 리스트 스타일 죽이기 */
+ul, ol, li{ list-style: none;}
+/* end 공통부분 */
+
+/* Header */
+header {
+    width:98%;
+    /* min-width: 1200px; */
+    margin: 0 0  10px;
+    padding: 18px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
+
+    display: inline-flex;
+    flex-direction: row;
+    align-items:center
+}
+
+.util { margin-right: 250px; }
+.logo {
+    font-size: 21px;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.nav {
+    width: 50%;
+}
+.nav_ul {
+    width: 300px;
+    display: inline-flex;
+    align-items:center;
+    justify-content: space-around;
+}

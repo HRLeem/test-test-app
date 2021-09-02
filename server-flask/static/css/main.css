@@ -1,0 +1,42 @@
+.main_wrap {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 멋있는 타이틀 스타일
+h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+} */
+
+.btn7 {
+    width: 7rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #999;
+    box-shadow: inset 0 0 0 0 #6098FF;
+    -webkit-transition: all 0.4s cubic-bezier(.9, .24, .40, 1);
+    transition: all 0.4s cubic-bezier(.9, .24, .40, 1);
+}
+.btn7:hover::before {
+    opacity: 1;
+    height: 100%;
+}
+.btn7:hover {
+    box-shadow: inset 0 100px 0 0 #6098FF;
+    color: #ffffff;
+}
+.load{
+    font-size: 21px;
+    letter-spacing: 3px;
+}

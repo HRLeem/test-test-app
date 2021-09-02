@@ -1,0 +1,34 @@
+{
+    "simple": {
+        "dw":"x",
+        "dxy":"x",
+        "d_gap_rate":"x",
+        "profit_rate":"x"
+    },
+    "detail": {
+        "year": {
+            "dw":"1136.615",
+            "dxy":"91.975",
+            "d_gap_rate":"8.09",
+            "profit_rate":"1145.74"
+        },
+        "today": {
+            "dw":"1159.05",
+            "dxy":"92.69",
+            "d_gap_rate":"8.0",
+            "profit_rate":"1159.05"
+        },
+        "desirable":{
+            "dw":">",
+            "dxy":">",
+            "d_gap_rate":"<",
+            "profit_rate":">"
+        }
+    },
+    "korean":{
+        "dw":"원/달러",
+        "dxy":"달러 지수",
+        "d_gap_rate":"달러 갭 비율",
+        "profit_rate":"적정 환율"
+    }
+}
