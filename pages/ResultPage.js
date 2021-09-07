@@ -66,7 +66,7 @@ export default function ResultPage({navigation, route}) {
 
     const apitest = async () => {
         try {
-            const url = 'http://115.68.95.177:5000/crawl'
+            const url = 'http://172.31.12.136:5000/crawl'
             const response = await axios.get(url);
             const result = response['data']
             console.log(result)

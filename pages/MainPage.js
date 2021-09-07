@@ -2,6 +2,8 @@ import {StatusBar} from 'expo-status-bar';
 import React, {useEffect, useState} from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
+
+import axios from 'axios'
 export default function MainPage( {navigation, route}) {
 
     const [ date, setDate ] = useState('')
@@ -21,11 +23,21 @@ export default function MainPage( {navigation, route}) {
         return `${year} / ${month} / ${date}`;
     }
 
+    // const test = async () => {
+    //     console.log('in)')
+    //     const url = 'http://172.30.66.19:80/'
+    //     const res = await axios.get(url);
+    //     console.log(res)
+    // }
+
     return (
         <View style={styles.container}>
             <Text style={styles.date}>{date}</Text>
-            <TouchableOpacity style={[styles.btn, styles.b]} onPress={()=>{navigation.navigate('ResultPage')}}>
+            <TouchableOpacity disabled={true} style={[styles.btn, styles.disabled]} onPress={()=>{navigation.navigate('ResultPage')}}>
                 <Text style={styles.btnText}>Start</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.btn, styles.b]} onPress={()=>{navigation.navigate('MiniPage')}}>
+                <Text style={styles.btnText}>Mini</Text>
             </TouchableOpacity>
         </View>
     )
@@ -60,6 +72,11 @@ const styles = StyleSheet.create({
         letterSpacing: 3,
         fontWeight: '700',
     },
+    disabled: {
+        backgroundColor: '#ccc',
+        borderColor: '#999',
+        borderWidth: 1,
+    }
 
 
     // b: {borderWidth: 1}
