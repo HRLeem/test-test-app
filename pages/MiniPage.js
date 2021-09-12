@@ -14,7 +14,9 @@ export default function MiniPage({navigation, route}) {
     const [newData, setNewData] = useState()
 
     useEffect(()=> {
-        console.log(newData)
+        navigation.setOptions({
+            title: 'Dollar Data Table'
+        })
     })
 
     return (
@@ -23,6 +25,7 @@ export default function MiniPage({navigation, route}) {
                 <RNPickerSelect
                 style={{ ...pickerSelectStyles }}
                 onValueChange={(value) => setNewData(value)}
+                placeholder={{label: '선택해주세요!', value: null}}
                 items={[
                     { label: '1년 데이터 (21년 9월 7일 기준)', value: false },
                     { label: '새로 입력하기', value: true },

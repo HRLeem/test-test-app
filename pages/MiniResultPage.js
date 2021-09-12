@@ -1,8 +1,11 @@
 import React,{useState, useEffect} from 'react'
-import { StyleSheet, Text, View,TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View,TouchableOpacity, Dimensions } from 'react-native'
 
 import Loading from '../components/Loading'
 import MiniTable from '../components/MiniTable'
+
+const windowWidth = Dimensions.get('window').width;
+
 export default function MiniResultPage({navigation, route}) {
 
     const [ state, setState ] = useState()
@@ -10,6 +13,9 @@ export default function MiniResultPage({navigation, route}) {
     const [ ready, SetReady ] = useState(false)
     const [ show, setShow ] = useState()
 useEffect(()=> {
+    navigation.setOptions({
+        title: "Today's Result"
+    })
     if (!state) {
         let pull_it = route.params;
         console.log(pull_it)
@@ -38,6 +44,7 @@ useEffect(()=> {
         
     return (!ready)? <Loading/> : (
         <View style={styles.container}>
+            <View style={styles.forCenter}>
             {
                 show == 'detail' ? (
                     <MiniTable isSimple={false} state={state} makeState={makeState}/>
@@ -47,6 +54,7 @@ useEffect(()=> {
                     ) : ( <View></View> )
                 )
             }
+            </View>
             <TouchableOpacity style={[styles.btn, styles.detail]} onPress={()=>setShow('detail')}>
                 <Text style={styles.btnText}>자세히 보기</Text>
             </TouchableOpacity>
@@ -81,6 +89,11 @@ const styles = StyleSheet.create({
         letterSpacing: 3,
         fontWeight: '700',
     },
+    forCenter: {
+        width: windowWidth,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
 
     
 })

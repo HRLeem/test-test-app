@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     th: {flex:1},
     tdText: { fontSize: 23, },
     thText: {
-        fontSize: 23,
+        fontSize: 20,
         textAlign: 'center'
     },
     detailText: {

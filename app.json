@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "test-test-app",
-    "slug": "test-test-app",
+    "name": "dollar-data-table",
+    "slug": "dollar-data-table",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,7 +17,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hrleem.dollar-data-table"
     },
     "android": {
       "adaptiveIcon": {

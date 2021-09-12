@@ -36,7 +36,7 @@ export default function AbleInput({navigation}) {
                         onChangeText={val=>setY_dw(val)}
                         placeholder=''
                         keyboardType="numeric"
-                        returnKeyType="next"
+                        returnKeyType="done"
                     />
                 </View>
             </View>
@@ -52,7 +52,7 @@ export default function AbleInput({navigation}) {
                         onChangeText={val=>setY_dxy(val)}
                         placeholder=''
                         keyboardType="numeric"
-                        returnKeyType="next"
+                        returnKeyType="done"
                     />
                 </View>
             </View>
@@ -69,7 +69,7 @@ export default function AbleInput({navigation}) {
                         onChangeText={val=>setP_dw(val)}
                         placeholder=''
                         keyboardType="numeric"
-                        returnKeyType="next"
+                        returnKeyType="done"
                     />
                 </View>
             </View>
